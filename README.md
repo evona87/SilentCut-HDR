@@ -7,14 +7,14 @@ This application is built using Python 3.8+, FastAPI, and Biopython. We highly r
 1. Clone the repository from GitHub
    
 ```
-git clone [https://github.com/evona87/SilentCut-HDR.git](https://github.com/evona87/SilentCut-HDR.git)
+git clone https://github.com/evona87/SilentCut-HDR.git
 cd SilentCut-HDR
 ```
 2. Create and activate a Python virtual environment. This ensures dependencies don't interfere with other Python projects. (optional)
 
 ```
-python3 -m venv venv
-source venv/bin/activate  # Use 'venv\Scripts\activate' on Windows
+python3 -m venv SilentCut
+source SilentCut/bin/activate  # Use 'SilentCut\Scripts\activate' on Windows
 ```
 
 3. Install all required dependencies
