@@ -6,21 +6,30 @@ This application is built using Python 3.8+, FastAPI, and Biopython. We highly r
 
 Follow these four steps to get the application running on your local machine:
 
-# 1. Clone the repository from GitHub
+1. Clone the repository from GitHub
+   
+```
 git clone [https://github.com/evona87/SilentCut-HDR.git](https://github.com/evona87/SilentCut-HDR.git)
 cd SilentCut-HDR
+```
+2. Create and activate a Python virtual environment
+This ensures dependencies don't interfere with other Python projects.
 
-# 2. Create and activate a Python virtual environment
-# This ensures dependencies don't interfere with other Python projects.
+```
 python3 -m venv venv
 source venv/bin/activate  # Use 'venv\Scripts\activate' on Windows
+```
 
-# 3. Install all required dependencies
-# We install FastAPI (the framework), uvicorn (the ASGI server), and Biopython (for sequence analysis).
-# We also include pydantic and CORSMiddleware as per your imports.
+3. Install all required dependencies
+We install FastAPI (the framework), uvicorn (the ASGI server), and Biopython (for sequence analysis).
+We also include pydantic and CORSMiddleware as per your imports.
+```
 pip install fastapi uvicorn 'biopython[full]' pydantic python-multipart 'fastapi-utils'
+```
 
-# 4. Start the FastAPI server
-# This command runs the uvicorn server, pointing it to the 'app' object inside the 'backend.py' file.
+4. Start the FastAPI server
+This command runs the uvicorn server, pointing it to the 'app' object inside the 'backend.py' file.
+```
 uvicorn backend:app --reload
+```
 
