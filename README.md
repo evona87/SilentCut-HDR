@@ -17,8 +17,7 @@ python3 -m venv SilentCut
 source SilentCut/bin/activate  # Use 'SilentCut\Scripts\activate' on Windows
 ```
 
-3. Install all required dependencies
-We install FastAPI (the framework), uvicorn (the ASGI server), and Biopython (for sequence analysis).
+3. Install all required dependencies. We install FastAPI (the framework), uvicorn (the ASGI server), and Biopython (for sequence analysis).
 ```
 pip install fastapi uvicorn 'biopython[full]' pydantic python-multipart 'fastapi-utils'
 ```
