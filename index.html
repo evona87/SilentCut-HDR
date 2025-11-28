@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SilentCut-HDR: Restriction Enzyme Marker Designer</title>
+
+    <!-- External fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <h1>SilentCut-HDR: Restriction Enzyme Marker Designer</h1>
+        <p>Calculate all possible synonymous (silent) mutations within a given target sequence and identify which of those silent changes will introduce a novel Restriction Enzyme (RE) recognition site.</p>
+        
+        <div class="stats-card">
+            <div><strong>Sequence Length:</strong> <span id="sequence-length" class="stats-value">0</span> bp</div>
+        </div>
+        
+        <div>
+            <label for="dna-sequence"><strong>DNA Sequence Input:</strong></label>
+            <textarea id="dna-sequence" placeholder="Paste your DNA sequence here (e.g., ATGCTAGCTAGCTAGCTAGCT...)" required></textarea>
+        </div>
+        
+        <button id="analyze-btn">
+            <span id="analyze-text">Analyze Sequence</span>
+            <span id="loading-indicator" style="display: none;" class="loading"></span>
+        </button>
+        
+        <div id="error-message" class="error" style="display: none;"></div>
+        
+        <div id="results" class="results" style="display: none;">
+            <h2>Analysis Results</h2>
+            <div id="results-content"></div>
+        </div>
+    </div>
+    
+    <div class="sidebar">
+        <h2>Enzyme Preview</h2>
+        <div id="enzyme-preview-container">
+            <p>Select an enzyme from the results to view detailed information here.</p>
+        </div>
+        
+        <div class="enzyme-preview" id="selected-enzyme-preview" style="display: none;">
+            <h3 id="preview-enzyme-name"></h3>
+            <div class="enzyme-info">
+                <p><strong>Recognition Site:</strong> <span id="preview-recognition-site" class="dna-visualization"></span></p>
+                <p><strong>Cut Position:</strong> <span id="preview-cut-position"></span></p>
+                <p><strong>Organism:</strong> <span id="preview-organism"></span></p>
+                <p><strong>Commercial Source:</strong> <span id="preview-source"></span></p>
+            </div>
+            <div id="preview-sequence-match" style="margin-top: 15px;"></div>
+        </div>
+    </div>
+    
+    <div id="enzyme-modal" class="enzyme-modal">
+        <div class="modal-content">
+            <h2 id="enzyme-modal-title"></h2>
+            <div id="enzyme-modal-content"></div>
+            <button onclick="document.getElementById('enzyme-modal').style.display = 'none'" style="margin-top: 20px;">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="js/script.js"></script>
+</body>
+</html>
