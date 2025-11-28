@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Restriction Enzyme View</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- External extracted stylesheet -->
+  <link rel="stylesheet" href="css/enzyme_view.css">
+
+  <!-- Google fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Roboto+Mono&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <div class="page">
+    <!-- Metadata card -->
+    <div class="card">
+      <h1 id="enzyme-title">Restriction Enzyme</h1>
+      <div id="meta-error" class="error-msg" style="display: none;"></div>
+
+      <div id="meta-grid" class="meta-grid" style="display: none;">
+        <div class="meta-item">
+          <div class="meta-label">Enzyme</div>
+          <div class="meta-value" id="meta-name"></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Recognition site</div>
+          <div class="meta-value" id="meta-site"></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Cut type</div>
+          <div class="meta-value" id="meta-type"></div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Cut offsets</div>
+          <div class="meta-value">
+            5′: <span id="meta-cut5"></span>,
+            3′: <span id="meta-cut3"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="pattern-box" class="pattern-box" style="display: none;">
+        <strong>Cut pattern:</strong>
+        <pre id="pattern-pre"></pre>
+      </div>
+    </div>
+
+    <!-- Visualization card -->
+    <div class="card">
+      <h2>Sequence &amp; Cut Sites</h2>
+      <div id="seq-error" class="error-msg" style="display: none;"></div>
+
+      <div id="seq-container" class="seq-container" style="display: none;">
+        <div id="seq-inner" class="seq-inner">
+          <!-- strands + arrows go here -->
+        </div>
+      </div>
+
+      <h3 style="margin-top: 18px;">Cuts for this enzyme</h3>
+      <ul id="cut-list" class="cut-list"></ul>
+      <div id="no-cuts-msg" class="no-cuts" style="display: none;">
+        No cut sites for this enzyme were found in the provided sequence.
+      </div>
+    </div>
+  </div>
+
+  <!-- External extracted JavaScript -->
+  <script src="js/enzyme_view.js"></script>
+</body>
+</html>
