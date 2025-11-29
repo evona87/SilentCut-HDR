@@ -44,11 +44,33 @@
         </div>
       </div>
 
+      <!-- NEW Mutation box -->
+      <div id="mutation-box" class="mutation-box" style="display: none;">
+        <strong>Mutation:</strong>
+        <div class="mut-row">
+          <span class="mut-label">Original codon:</span>
+          <span class="mut-value" id="mut-original"></span>
+        </div>
+        <div class="mut-row">
+          <span class="mut-label">Mutated codon:</span>
+          <span class="mut-value" id="mut-mutated"></span>
+        </div>
+        <div class="mut-row">
+          <span class="mut-label">Changed base:</span>
+          <span class="mut-value" id="mut-base"></span>
+        </div>
+        <div class="mut-row">
+          <span class="mut-label">Codon position:</span>
+          <span class="mut-value" id="mut-pos"></span>
+        </div>
+      </div>
+
       <div id="pattern-box" class="pattern-box" style="display: none;">
         <strong>Cut pattern:</strong>
         <pre id="pattern-pre"></pre>
       </div>
     </div>
+
 
     <!-- Visualization card -->
     <div class="card">

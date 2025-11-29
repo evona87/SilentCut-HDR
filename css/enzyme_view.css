@@ -99,7 +99,6 @@
       margin-top: 12px;
     }
 
-    /* Sequence visualization */
     .seq-container {
       margin-top: 10px;
       padding: 16px;
@@ -183,7 +182,6 @@
       transform: translate(-50%, 0);
     }
 
-    /* Cut list */
     .cut-list {
       margin-top: 16px;
       padding-left: 0;
@@ -225,6 +223,36 @@
       color: #6c757d;
       margin-top: 8px;
     }
+
+    .mut-base {
+      color: #d9534f !important; 
+      font-weight: bold;
+    }
+
+    .mutation-box {
+      background: #fff5f5;
+      border-left: 4px solid #d9534f;
+      padding: 12px 15px;
+      border-radius: 6px;
+      margin-top: 16px;
+      margin-bottom: 14px;
+    }
+
+    .mut-row {
+      margin-top: 4px;
+      display: flex;
+      gap: 8px;
+    }
+
+    .mut-label {
+      font-weight: 600;
+      color: #b11919;
+    }
+
+    .mut-value {
+      font-family: "Roboto Mono", monospace;
+    }
+
 
     @media (max-width: 768px) {
       .card {
