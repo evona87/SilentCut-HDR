@@ -51,6 +51,9 @@ uvicorn backend:app --reload
 <img src="pic/Preview.png" alt="Screenshot showing the detailed preview of the enzyme's cut site." style="max-width: 60%; height: auto;">
 </div>
 
-5. Coming Soon: By clicking the "View Full Page" option, you will be able to see exactly where the cut occurs within the given codon sequence, right in the application.
+5. By clicking “View Full Page,” you can see the exact cut position within the codon sequence, together with additional detailed information about the enzyme.
+<div align="center" style="margin-top: 15px; margin-bottom: 200px;">
+<img src="pic/full_page.png" alt="Screenshot showing the detailed information abput the enzyme." style="max-width: 60%; height: auto;">
+</div>
 
 Important Note: Alternatively, you can take the enzyme and visualize its cut site in an external tool like Benchling. This is highly recommended to ensure the cut is specific only to your introduced mutation and that no pre-existing cutting sides in the whole PCR Product that will be used for your mutation screening will cause unwanted multiple fragments in downstream analysis/gel electrophoresis.
