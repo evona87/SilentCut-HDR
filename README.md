@@ -2,7 +2,7 @@
 SilentCut-HDR is a straightforward web application designed to accelerate the screening process for CRISPR Homology Directed Repair (HDR) experiments. It automatically calculates all possible synonymous (silent) mutations within a given target sequence and identifies which of those silent changes will introduce a novel Restriction Enzyme (RE) recognition site. The application's core value is suggesting the ideal Restriction Enzyme site change within the target sequence, enabling researchers to quickly confirm successful gene integration using a simple, cost-effective RE digest of bulk-edited cells. Developed in Python, the application uses FastAPI for its web interface and relies on the robust functionality of Biopython for all sequence and enzyme calculations.
 
 # Installation
-This application is built using Python 3.8+, FastAPI, and Biopython. We highly recommend using a virtual environment (venv) to keep dependencies isolated. Follow these four steps to get the application running on your local machine:
+This application is built using Python 3.8+, FastAPI, and Biopython. We highly recommend using a virtual environment (venv) to keep dependencies isolated. Follow these five steps to get the application running on your local machine:
 
 1. Clone the repository from GitHub
    
@@ -26,6 +26,8 @@ pip install fastapi uvicorn 'biopython[full]' pydantic python-multipart 'fastapi
 ```
 uvicorn backend:app --reload
 ```
+5. Open index.html in your web browser
+   
 # How to Use
 1. Input the Target Sequence: Add the coding sequence where you wish to introduce a silent mutation and subsequent cut site.
 
